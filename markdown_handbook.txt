@@ -1,0 +1,979 @@
+Yes. You need a **Markdown handbook**. GitHub README files use **Markdown**, not normal Word-style formatting. Save this mentally: **blank lines and special symbols control the formatting**.
+
+Below is your practical handbook.
+
+---
+
+# README / Markdown Handbook
+
+## 1. Normal line-by-line text
+
+Wrong:
+
+```markdown
+This is line one
+This is line two
+This is line three
+```
+
+GitHub may render it like one paragraph.
+
+Correct method 1: use blank lines between lines:
+
+```markdown
+This is line one.
+
+This is line two.
+
+This is line three.
+```
+
+Output:
+
+This is line one.
+
+This is line two.
+
+This is line three.
+
+Correct method 2: use bullet points if it is a list:
+
+```markdown
+- This is line one
+- This is line two
+- This is line three
+```
+
+Output:
+
+* This is line one
+* This is line two
+* This is line three
+
+Correct method 3: force a line break using two spaces at end of line:
+
+```markdown
+This is line one.  
+This is line two.  
+This is line three.
+```
+
+I do **not** recommend this for you. It is easy to miss the two spaces. Use blank lines or bullets.
+
+---
+
+# 2. Headings
+
+Use `#`.
+
+```markdown
+# Main Title
+
+## Big Section
+
+### Subsection
+
+#### Smaller subsection
+```
+
+Output:
+
+# Main Title
+
+## Big Section
+
+### Subsection
+
+#### Smaller subsection
+
+Use only one `#` title at the top of README.
+
+---
+
+# 3. Paragraphs
+
+Always keep a blank line between paragraphs.
+
+```markdown
+This repo is for testing and practicing GitHub workflow.
+
+Proper and useful files will later be moved to the main deep learning repo.
+```
+
+Do **not** write everything continuously.
+
+Bad:
+
+```markdown
+This repo is for testing and practicing GitHub workflow.
+Proper and useful files will later be moved to the main deep learning repo.
+```
+
+It may appear merged.
+
+---
+
+# 4. Bullet points
+
+Use `-`.
+
+```markdown
+- Learn concept
+- Implement code
+- Run experiment
+- Write observation
+- Commit and push
+```
+
+For nested bullets, use spaces:
+
+```markdown
+- Deep Learning
+  - Tensors
+  - Autograd
+  - Gradient descent
+- Computer Vision
+  - CNN
+  - Object detection
+  - Segmentation
+```
+
+Output:
+
+* Deep Learning
+
+  * Tensors
+  * Autograd
+  * Gradient descent
+* Computer Vision
+
+  * CNN
+  * Object detection
+  * Segmentation
+
+---
+
+# 5. Numbered lists
+
+```markdown
+1. Create note.
+2. Create notebook.
+3. Run code.
+4. Write observations.
+5. Push to GitHub.
+```
+
+Output:
+
+1. Create note.
+2. Create notebook.
+3. Run code.
+4. Write observations.
+5. Push to GitHub.
+
+You can also write every number as `1.` and Markdown will auto-number:
+
+```markdown
+1. Create note.
+1. Create notebook.
+1. Run code.
+1. Push to GitHub.
+```
+
+But for clarity, use actual numbers.
+
+---
+
+# 6. Inline code
+
+Use single backticks for commands, filenames, folder names, variables.
+
+```markdown
+Use `git status` to check current changes.
+
+Create notes inside `notes/`.
+
+The file name should be `001_pytorch_tensors.md`.
+```
+
+Output:
+
+Use `git status` to check current changes.
+
+Create notes inside `notes/`.
+
+The file name should be `001_pytorch_tensors.md`.
+
+Use inline code for:
+
+```text
+git commands
+file names
+folder names
+Python variable names
+package names
+```
+
+---
+
+# 7. Code blocks
+
+Use triple backticks.
+
+For bash commands:
+
+````markdown
+```bash
+git status
+git add .
+git commit -m "Update README"
+git push
+```
+````
+
+Output:
+
+```bash
+git status
+git add .
+git commit -m "Update README"
+git push
+```
+
+For Python:
+
+````markdown
+```python
+import torch
+
+x = torch.tensor([1, 2, 3])
+print(x)
+```
+````
+
+Output:
+
+```python
+import torch
+
+x = torch.tensor([1, 2, 3])
+print(x)
+```
+
+For plain text:
+
+````markdown
+```text
+notes/
+notebooks/
+src/
+experiments/
+```
+````
+
+Output:
+
+```text
+notes/
+notebooks/
+src/
+experiments/
+```
+
+Important: use the right language after the opening backticks:
+
+```text
+bash      for terminal commands
+python    for Python code
+markdown  for Markdown examples
+text      for plain structure/output
+json      for JSON
+yaml      for YAML
+gitignore for .gitignore files
+```
+
+---
+
+# 8. Tables
+
+Tables are best for folder structure.
+
+```markdown
+| Folder | Purpose |
+|---|---|
+| `notes/` | Markdown notes |
+| `notebooks/` | Jupyter notebooks |
+| `src/` | Reusable Python code |
+| `datasets/` | Small sample datasets only |
+| `models/` | Avoid pushing big model files |
+```
+
+Output:
+
+| Folder       | Purpose                       |
+| ------------ | ----------------------------- |
+| `notes/`     | Markdown notes                |
+| `notebooks/` | Jupyter notebooks             |
+| `src/`       | Reusable Python code          |
+| `datasets/`  | Small sample datasets only    |
+| `models/`    | Avoid pushing big model files |
+
+Rule: tables need one header row, one separator row, then data rows.
+
+---
+
+# 9. Horizontal line
+
+Use:
+
+```markdown
+---
+```
+
+Example:
+
+```markdown
+# My Repo
+
+Short description.
+
+---
+
+## Setup
+
+Steps go here.
+```
+
+Output:
+
+---
+
+Use this to separate big sections.
+
+---
+
+# 10. Bold and italic text
+
+```markdown
+**Important:** Always run `git pull` before editing.
+
+*Optional:* You can create a branch for experiments.
+```
+
+Output:
+
+**Important:** Always run `git pull` before editing.
+
+*Optional:* You can create a branch for experiments.
+
+Use bold for warnings and key points.
+
+---
+
+# 11. Checkboxes / task list
+
+```markdown
+## Today
+
+- [x] Create GitHub repo
+- [x] Push README
+- [ ] Create virtual environment
+- [ ] Add first notebook
+- [ ] Push first experiment
+```
+
+Output:
+
+## Today
+
+* [x] Create GitHub repo
+* [x] Push README
+* [ ] Create virtual environment
+* [ ] Add first notebook
+* [ ] Push first experiment
+
+This is useful for learning progress.
+
+---
+
+# 12. Links
+
+```markdown
+[GitHub](https://github.com)
+
+[PyTorch Documentation](https://pytorch.org/docs/stable/index.html)
+```
+
+Output:
+
+[GitHub](https://github.com)
+
+[PyTorch Documentation](https://pytorch.org/docs/stable/index.html)
+
+---
+
+# 13. Images
+
+Syntax:
+
+```markdown
+![Description](assets/images/example.png)
+```
+
+Example:
+
+```markdown
+![Training loss curve](assets/images/loss_curve.png)
+```
+
+Folder should exist:
+
+```text
+assets/images/
+```
+
+Image path must be correct relative to README.
+
+---
+
+# 14. File tree structure
+
+Use a `text` code block.
+
+````markdown
+```text
+deep-learning-learning-lab/
+├── README.md
+├── notes/
+├── notebooks/
+├── src/
+├── datasets/
+├── models/
+└── reports/
+```
+````
+
+Output:
+
+```text
+deep-learning-learning-lab/
+├── README.md
+├── notes/
+├── notebooks/
+├── src/
+├── datasets/
+├── models/
+└── reports/
+```
+
+Do not write folder structures as plain text paragraphs. They will look ugly.
+
+---
+
+# 15. Warning / note style
+
+GitHub supports nice callouts.
+
+```markdown
+> [!NOTE]
+> This repo is for learning and experiments.
+
+> [!WARNING]
+> Do not push large datasets or model weights to GitHub.
+
+> [!TIP]
+> Commit after every meaningful experiment.
+```
+
+Output on GitHub will look like note/warning boxes.
+
+Use them, but don’t overuse them.
+
+---
+
+# 16. Best README template for your learning repo
+
+Copy this structure whenever you create a repo:
+
+````markdown
+# Repo Name
+
+Short description of what this repo is for.
+
+---
+
+## Goal
+
+Explain the purpose of this repo.
+
+---
+
+## Folder Structure
+
+| Folder | Purpose |
+|---|---|
+| `notes/` | Learning notes |
+| `notebooks/` | Jupyter notebooks |
+| `src/` | Reusable Python code |
+| `experiments/` | One-off experiments |
+| `reports/` | Mini reports and results |
+
+---
+
+## Setup
+
+```bash
+cd ~/projects/repo-name
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+---
+
+## Daily Workflow
+
+```bash
+git pull
+source .venv/bin/activate
+code .
+```
+
+After finishing:
+
+```bash
+git status
+git add .
+git commit -m "Meaningful commit message"
+git push
+```
+
+---
+
+## Learning Progress
+
+- [ ] PyTorch tensors
+- [ ] Autograd
+- [ ] Gradient descent
+- [ ] Loss functions
+- [ ] Optimizers
+- [ ] CNN basics
+- [ ] Autoencoders
+- [ ] GAN basics
+
+---
+
+## Rules
+
+> [!WARNING]
+> Do not push large datasets, model weights, passwords, or API keys.
+
+> [!TIP]
+> Every topic should have notes, code, and observations.
+````
+
+---
+
+# 17. How to write Python commands in README
+
+Use `bash` block for terminal commands:
+
+````markdown
+```bash
+python train.py
+python evaluate.py
+pip install torch torchvision
+```
+````
+
+Use `python` block for actual Python code:
+
+````markdown
+```python
+import torch
+
+x = torch.tensor([1, 2, 3])
+print(x.shape)
+```
+````
+
+Do not mix them.
+
+Bad:
+
+````markdown
+```python
+pip install torch
+python train.py
+```
+````
+
+Why bad? `pip install torch` is a terminal command, not Python code.
+
+Correct:
+
+````markdown
+```bash
+pip install torch
+python train.py
+```
+````
+
+---
+
+# 18. How to add command outputs
+
+Use `text`.
+
+````markdown
+```text
+Using device: cuda
+Training loss: 0.234
+Validation accuracy: 91.2%
+```
+````
+
+Do not use `python` or `bash` for outputs.
+
+---
+
+# 19. How to show before/after results
+
+````markdown
+## Result
+
+Before tuning:
+
+```text
+Validation accuracy: 82.4%
+````
+
+After tuning:
+
+```text
+Validation accuracy: 88.9%
+```
+
+Observation:
+
+* Lower learning rate made training more stable.
+* Accuracy improved, but training took longer.
+
+````
+
+This is exactly the kind of writing you should do for your DL experiments.
+
+---
+
+# 20. How to write formulas
+
+Simple formulas can use backticks:
+
+```markdown
+Loss = `prediction - actual`
+````
+
+For GitHub math, use dollar syntax:
+
+```markdown
+Mean Squared Error:
+
+$$
+MSE = \frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y}_i)^2
+$$
+```
+
+Output on GitHub should render as math.
+
+For inline math:
+
+```markdown
+The learning rate is represented as $\alpha$.
+```
+
+---
+
+# 21. How to create sections for one learning topic
+
+Use this template for every note in `notes/`.
+
+````markdown
+# Gradient Descent
+
+## What I learned
+
+- Gradient descent updates weights step by step.
+- It uses the slope of the loss function.
+- Learning rate controls step size.
+
+---
+
+## Intuition
+
+If the loss is high, the model is wrong.  
+Gradient descent tells the model which direction to move the weights to reduce loss.
+
+---
+
+## Formula
+
+$$
+w_{new} = w_{old} - \alpha \frac{dL}{dw}
+$$
+
+---
+
+## Code Practiced
+
+```python
+w = w - learning_rate * gradient
+```
+
+---
+
+## Experiment
+
+I tried different learning rates:
+
+| Learning Rate | Result |
+|---|---|
+| `0.001` | Too slow |
+| `0.01` | Stable |
+| `0.1` | Fast but unstable |
+| `1.0` | Diverged |
+
+---
+
+## My Mistakes
+
+- I confused loss value with gradient.
+- I forgot to zero gradients before the next step.
+
+---
+
+## Final Understanding
+
+Gradient descent is not magic. It is just repeated correction based on error direction.
+````
+
+Use this repeatedly. It will make your notes much better.
+
+---
+
+# 22. How to add new content safely
+
+Before editing:
+
+```bash
+git pull
+```
+
+Edit README.
+
+Preview in VS Code:
+
+1. Open `README.md`
+2. Press:
+
+```text
+Ctrl + Shift + V
+```
+
+or right-click → **Open Preview**
+
+Then commit:
+
+```bash
+git status
+git add README.md
+git commit -m "Update README with markdown examples"
+git push
+```
+
+---
+
+# 23. Your common mistakes to avoid
+
+## Mistake 1: Writing folder lists as normal text
+
+Bad:
+
+```markdown
+notes/ Learning notes notebooks/ Jupyter notebooks src/ Python code
+```
+
+Good:
+
+```markdown
+| Folder | Purpose |
+|---|---|
+| `notes/` | Learning notes |
+| `notebooks/` | Jupyter notebooks |
+| `src/` | Python code |
+```
+
+---
+
+## Mistake 2: Writing commands without code blocks
+
+Bad:
+
+```markdown
+git status
+git add .
+git commit -m "message"
+git push
+```
+
+Good:
+
+````markdown
+```bash
+git status
+git add .
+git commit -m "message"
+git push
+```
+````
+
+---
+
+## Mistake 3: No blank lines between sections
+
+Bad:
+
+````markdown
+## Setup
+Run this command:
+```bash
+git pull
+````
+
+## Usage
+
+Run this:
+
+`````
+
+Good:
+
+````markdown
+## Setup
+
+Run this command:
+
+```bash
+git pull
+`````
+
+## Usage
+
+Run this:
+
+````
+
+Blank lines matter.
+
+---
+
+## Mistake 4: Using backslash wrongly
+
+In your screenshot, you had:
+
+```markdown
+\ git status
+```
+
+That is wrong. Write:
+
+```markdown
+git status
+```
+
+inside a code block.
+
+---
+
+# 24. Mini cheat sheet
+
+```markdown
+# Title
+
+## Section
+
+### Subsection
+
+Normal paragraph here.
+
+- Bullet one
+- Bullet two
+  - Nested bullet
+
+1. Step one
+2. Step two
+
+`inline code`
+
+```bash
+terminal command
+```
+
+```python
+python code
+```
+
+```text
+plain output or folder tree
+```
+
+| Column 1 | Column 2 |
+|---|---|
+| Value 1 | Value 2 |
+
+> [!WARNING]
+> Important warning here.
+
+[Link text](https://example.com)
+
+![Image description](assets/images/image.png)
+
+$$
+formula
+$$
+```
+
+One catch: the cheat sheet above contains triple backticks inside triple backticks, so if you copy it directly, it may break. Better copy individual sections.
+
+---
+
+# 25. What you should do now
+
+Create one file:
+
+```bash
+touch notes/000_markdown_handbook.md
+```
+
+Paste this type of content there. Then commit it:
+
+```bash
+git status
+git add notes/000_markdown_handbook.md
+git commit -m "Add markdown handbook"
+git push
+```
+
+Also install this VS Code extension:
+
+```text
+Markdown All in One
+```
+
+Then always preview before pushing:
+
+```text
+Ctrl + Shift + V
+```
+
+This is the fastest way to avoid ugly README formatting.
+````

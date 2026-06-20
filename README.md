@@ -23,7 +23,7 @@ dummy repo for creating and trying out file. proper working files will be moved 
   notebooks/002_gradient_descent_from_scratch.ipynb
 
 # After finishing
-  git status
+\  git status
   git add .
   git commit -m "Add gradient descent notes and experiment"
   git push

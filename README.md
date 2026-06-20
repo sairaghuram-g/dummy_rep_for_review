@@ -27,3 +27,18 @@ cd ~/projects/dummy_rep_for_review
 source .venv/bin/activate
 git pull
 code .
+```
+
+## create files like this
+notes/002_gradient_descent.md
+notebooks/002_gradient_descent_from_scratch.ipynb
+
+## After fininshing
+
+```bash
+git status
+git add .
+git commit -m "Add gradient descent notes and experiment"
+git push
+```
+

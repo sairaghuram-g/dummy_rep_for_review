@@ -31,6 +31,7 @@ code .
 
 ## create files like this
 notes/002_gradient_descent.md
+
 notebooks/002_gradient_descent_from_scratch.ipynb
 
 ## After fininshing

@@ -68,4 +68,4 @@ plt.title('$\sum\sigma$ = %g' %np.sum(sigma))
 plt.show()
 ```
 
-![Sigmoid Function plot](assets/images/sigmoid_function_plot.png)
+![Sigmoid Function plot](/assets/images/sigmoid_function_plot.png)

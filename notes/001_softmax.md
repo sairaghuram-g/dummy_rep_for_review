@@ -19,6 +19,7 @@ $$
 lets consider an example 
 
 $$
+
 \begin{aligned}
 
 z &= [1,2,3] \\[6pt]
@@ -41,6 +42,7 @@ e^z &= [e^1, e^2, e^3] \\
 \sigma &= [0.09, 0.24, 0.67]
 
 \end{aligned}
+
 $$
 
 

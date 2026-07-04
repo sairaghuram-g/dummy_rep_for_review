@@ -63,3 +63,6 @@ plt.show()
 ```
 
 ![Sigmoid Function plot](/assets/images/sigmoid_function_plot.png)
+
+> [!NOTE]
+> We can clearly notice that the value of $e$ is streched at larger values - worth to be remembered

@@ -6,7 +6,7 @@ Softmax function based on **Natural exponent function** $e$
 
 $e$ is a constant irrational number where $e=2.718...$
 
-![Exponential Function Plot](/dummy_rep_for_review/assets/images/exponential_function_graph.png)
+![Exponential Function Plot](/assets/images/exponential_function_graph.png)
 
 $e$ raised to the power aything is always a positive number. That is the reason it is used in probabilities as the probabilities are always positive.
 
